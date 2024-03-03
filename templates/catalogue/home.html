@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body class="home_body">
+<div class="center">
+    <h1 class="login_title">Login</h1>
+    <form method="post">
+    <div class="txt_field">
+        <input type="text" required>
+        <span></span>
+        <label>Username</label>    
+    </div>
+    <div class="txt_field">
+        <input type="password" required>
+        <span></span>
+        <label>Password</label>    
+    </div>
+    <div class="pass">Forgot Password?</div>
+    <input type="submit" value="Login">
+    <div class="signup_link">
+        Not Signed Up? <a href="#">Signup</a>
+    </div>
+</form>
+</div>
+</body>
+</html>
+{% endblock content %}
