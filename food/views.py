@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Food
+from .models import Bakery_Item
 # Create your views here.
 
 def food_home(request):
@@ -14,6 +14,6 @@ def waste(request):
 def ordering(request):
     return render(request, 'food/ordering.html')
 
-def food(request):
-    food = Food.objects.all().order_by('date')
-    return render(request, 'food/sales.html', {'food':food})
+def bakery_item(request):
+    bakery_item = Bakery_Item.objects.all().order_by('date')
+    return render(request, 'food/sales.html', {'bakery_items':bakery_item})

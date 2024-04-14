@@ -12,10 +12,12 @@
     <div class="food_div">
     <h1 class="food_title">Sales</h1>
     </div>
+    {% for bakery_item in bakery_item %}
     <div class="food">
-        <h2>{{ food.name }}</h2>
-        <p>{{ food.type }} </p>
+        <h2 class="bakery_item_name">{{ bakery_item.name }}</h2>
+        <p>{{ bakery_item.sku }} </p>
     </div>
+    {% endfor %}
 </body>
 </html>
 {% endblock content %}
