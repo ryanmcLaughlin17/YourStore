@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', monospace;
   list-style: none;
   text-decoration: none;
 }
@@ -17,6 +20,14 @@
   height: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.outer_header{
+  width: 1000px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  float: right;
 }
 
 .logo_container{
@@ -45,7 +56,6 @@
   font-family: 'Montserrat';
   background: linear-gradient(120deg,#123f2c, #86b09d);
   height: 100vh;
-  overflow: hidden;
 }
 
 .center{
@@ -188,7 +198,7 @@ input[type="submit"]:hover{
 .food_div h1{
   text-align: center;
   padding: 0 0 10px 0;
-  border-bottom: 1px solid silver;
+
 }
 
 .food_categories{
@@ -221,6 +231,41 @@ input[type="submit"]:hover{
   cursor: pointer;
 }
 
-.bakery_item_name{
-  color: red;
+ul{
+  list-style: none;
 }
+
+ul li{
+  display: inline-block;
+  position: relative;
+}
+
+ul li a{
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 20px;
+}
+
+ul li ul.dropdown li{
+display: block;
+}
+
+ul li ul.dropdown{
+  width: 100%;
+  background: #14452F;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+
+ul li a:hover {
+  background: #14452F;
+}
+
+ul li:hover ul.dropdown{
+  display: block;
+}
+

@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet">
   <title>yourstore</title>
 </head>
@@ -11,12 +12,27 @@
     <div class="inner_header">
       <div class="logo_container">
       <h1 class="base_heading">Your<span>Store</span></h1>
-      </div>
-      <ul class="navigation">
-      </ul>
     </div>
-  </div>
-{% block content %}
-{% endblock content %}
+    <div class="outer_header">
+    <nav>
+      <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="#">Partners</a>
+            <ul class="dropdown">
+              <li><a href="#">Roster</a></li>
+              <li><a href="#">Sickness</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Analytics</a>
+            <ul class="dropdown">
+              <li><a href="#">Sales</a></li>
+              <li><a href="{% url 'food_home' %}">Food</a></li>
+            </ul>
+          </li>
+      </ul>
+    </nav>
+</div>
 </body>
 </html>
+{% block content %}
+{% endblock content %}
